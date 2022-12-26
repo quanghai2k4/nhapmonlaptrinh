@@ -44,7 +44,7 @@ void output(SinhVien arr[], int n)
 }
 void scaninfor(SinhVien arr[], int i)
 {
-	cout << i+1 << "\t" << arr[i].ten << setw(15) << arr[i].queQuan << setw(15) << arr[i].tuoi << setw(15) << arr[i].soThich << endl;
+	cout << setw(5) << left << i+1 << setw(20) << left << arr[i].ten << setw(20) << left << arr[i].queQuan << setw(20) << left << arr[i].tuoi << setw(15) << left << arr[i].soThich << endl;
 }
 void scantuoi(SinhVien arr[], int n)
 {
