@@ -35,11 +35,11 @@ void input(SinhVien arr[], int n)
 }
 void output(SinhVien arr[], int n)
 {
-	cout << "STT" << "\t" << "Ten" << setw(15) << "Que Quan" << setw(15) << "Tuoi" << setw(15) << "So Thich" << endl;
+	cout << setw(5) << left << "STT" << setw(20) << left << "Ten" << setw(20) << left << "Que Quan" << setw(20) << left << "Tuoi" << setw(15) << left << "So Thich" << endl;
 	
 	for (int i = 0; i < n; i++)
 	{
-		cout << i+1 << "\t" << arr[i].ten << setw(15) << arr[i].queQuan << setw(15) << arr[i].tuoi << setw(15) << arr[i].soThich << endl; 
+		cout << setw(5) << left << i+1 << setw(20) << left << arr[i].ten << setw(20) << left << arr[i].queQuan << setw(20) << left << arr[i].tuoi << setw(15) << left << arr[i].soThich << endl;
 	}
 }
 void scaninfor(SinhVien arr[], int i)
