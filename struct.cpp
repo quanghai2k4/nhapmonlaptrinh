@@ -51,6 +51,7 @@ void scantuoi(SinhVien arr[], int n)
 	fflush(stdin);
 	int tuoi;
 	int i = 0;
+	cout << "Nhap tuoi can loc: ";
 	cin >> tuoi;
 	for (i = 0; i < n; i++)
 	{
@@ -63,6 +64,7 @@ void scanque(SinhVien arr[], int n)
 	fflush(stdin);
 	string que;
 	int i = 0;
+	cout << "Nhap que quan can loc: ";
 	getline(std::cin, que);
 	for (i = 0; i < n; i++)
 	{
@@ -75,6 +77,7 @@ void scansothich(SinhVien arr[], int n)
 	fflush(stdin);
 	string soThich;
 	int i = 0;
+	cout << "Nhap so thich can loc: ";
 	getline(std::cin, soThich);
 	for (i = 0; i < n; i++)
 	{
@@ -89,7 +92,6 @@ int main()
 	cout << "Nhap so sinh vien: ";
 	cin >> n;
 	input(sinhvien, n);
-	output(sinhvien, n);
 	while (true)
 	{
 		system("cls");
@@ -97,6 +99,8 @@ int main()
 		cout << "1. Scan tuoi\n";
 		cout << "2. Scan que quan\n";
 		cout << "3. Scan so thich\n";
+		cout << "4. Hien thi danh sach sinh vien\n";
+		cout << "0. Thoat chuong trinh\n";
 		cout << "Nhap lua chon cua ban: ";
 		int selection;
 		cin >> selection;
@@ -107,14 +111,22 @@ int main()
 				break;
 			case 1:
 				scantuoi(sinhvien, n);
+				cout << "Nhan phim bat ki de tiep tuc!";
 				getch();
 				break;
 			case 2:
 				scanque(sinhvien, n);
+				cout << "Nhan phim bat ki de tiep tuc!";
 				getch();
 				break;
 			case 3:
 				scansothich(sinhvien, n);
+				cout << "Nhan phim bat ki de tiep tuc!";
+				getch();
+				break;
+			case 4:
+				output(sinhvien, n);
+				cout << "Nhan phim bat ki de tiep tuc!";
 				getch();
 				break;
 			default:
