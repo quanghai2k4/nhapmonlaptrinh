@@ -25,25 +25,6 @@ void Menu()
 	cout << "	0. Thoat chuong trinh\n";
 	cout << "-------------------------------------------------\n";
 }
-/*void input(SinhVien arr[], int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		cout << "Sinh Vien " << i + 1 << endl;
-		fflush(stdin);
-		cout << "Ten: ";
-		getline(std::cin, arr[i].ten);
-		cout << "Que Quan: ";
-		getline(std::cin, arr[i].queQuan);
-		fflush(stdin);
-		cout << "Tuoi: ";
-		cin >> arr[i].tuoi;
-		fflush(stdin);
-		cout << "So Thich: ";
-		getline(std::cin, arr[i].soThich);
-		cout << endl;
-	}
-}*/
 void output(SinhVien arr[], int n)
 {
 	cout << setw(5) << left << "STT" << setw(20) << left << "Ten" << setw(20) << left << "Que Quan" << setw(20) << left << "Tuoi" << setw(15) << left << "So Thich" << endl;
