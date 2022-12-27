@@ -42,45 +42,60 @@ void scantuoi(SinhVien arr[], int n)
 {
 	fflush(stdin);
 	int tuoi;
-	int i = 0;
+	int i = 0, count = 0;
 	cout << "Nhap tuoi can loc: ";
 	cin >> tuoi;
-	if (arr[i].tuoi != tuoi)
-		cout << "Khong co sinh vien " << tuoi << " tuoi" << endl;
 	for (i = 0; i < n; i++)
 	{
 		if (arr[i].tuoi == tuoi)
+		{
+			count++;
 			scaninfor(arr, i);
+		}	
+	}
+	if (count == 0)
+	{
+		cout << "Khong co sinh vien " << tuoi << " tuoi\n";
 	}
 }
 void scanque(SinhVien arr[], int n)
 {
 	fflush(stdin);
 	string que;
-	int i = 0;
+	int i = 0, count = 0;
 	cout << "Nhap que quan can loc: ";
 	getline(std::cin, que);
-	if (arr[i].queQuan != que)
-		cout << "Khong co sinh vien o " << que << endl;
 	for (i = 0; i < n; i++)
 	{
 		if (arr[i].queQuan == que)
+		{
+			count++;
 			scaninfor(arr, i);
+		}
+	}
+	if (count == 0)
+	{
+		cout << "Khong co sinh vien o " << que << endl;
 	}
 }
 void scansothich(SinhVien arr[], int n)
 {
 	fflush(stdin);
 	string soThich;
-	int i = 0;
+	int i = 0, count = 0;
 	cout << "Nhap so thich can loc: ";
 	getline(std::cin, soThich);
-	if (arr[i].soThich != soThich)
-		cout << "Khong co sinh vien thich " << soThich << endl;
 	for (i = 0; i < n; i++)
 	{
 		if (arr[i].soThich == soThich)
+		{
+			count++;
 			scaninfor(arr, i);
+		}		
+	}
+	if (count == 0)
+	{
+		cout << "Khong co sinh vien " << soThich << endl;
 	}
 }
 int main()
@@ -113,6 +128,7 @@ int main()
 					sinhvien[i].tuoi = tuoi[rand() % 5];
 					sinhvien[i].soThich = soThich[rand() % 5];
 				}
+				cout << "Done!\n";
 				cout << "Nhan phim bat ki de tiep tuc!";
 				getch();
 				break;
